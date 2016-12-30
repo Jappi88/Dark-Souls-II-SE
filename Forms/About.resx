@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="visualStudio2012DarkTheme1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>797, 17</value>
+  </metadata>
+  <data name="xtextbox.Text" xml:space="preserve">
+    <value>Dark Souls II Save Editor By Jappi88
+360Haven.com
+
+Thanks to:
+8Ball, Idlehands88,Sephiroth,Cybersam,Redemption213,OriginalBoss
+
+[ABOUT]
+This tool enables you to modify your Ps3 or Xbox360 save data.
+It does not require any third party app, unless your usb device is not supported by the program.
+This program is purely design to edit your save data for offline usage... if used online then a ban would be your own damn fault.
+
+I do not condone online cheating, nor abusing  other gaming experience and i'm not responsible for any damage you might cause to your self or others
+Please use this tool with caution.
+
+I, so please use with caution.
+
+The new version brings a new system that will be used for any advanced program.
+The system is designed to bring ease to any user, and especially to me when making updates.
+It is needed because there are too many leechers who didnt show any appreciations.
+The tool has been used by more then 14000 users, and only 250 of them could give a proper thanks.
+Thats actually a pretty bad insult considering the time and effort i put into my tools...
+
+That era is gone, only registered users are now able to use and profit from all the nice features that will come.
+The system includes a donation method that allows you to donate any amount you want.
+All donations will be received and processed automaticly.
+This tool will be all free, but only requires you to donate for the DLC items.
+If you wish to use the first dlc then 1$ is required, first and second will be 2$ and all three requires you to donate 3$.
+
+The 3th dlc will be added once it has been released.
+
+[Registration]
+Since version 2.0.0.0 is registration required.
+You can use the account for any other tool from now on.
+After you have registered, you will be able to send bugs to me, check your donations, view the app information,recieve updates and so on.
+The account will be bound to the system you registered on.
+If you log in from another OS then your account will be suspended until you activate it.
+Whenever your account gets activated , the OS you performed the task on will be your default OS.
+Each time you switch from Machine , you will need to reactive the account.
+
+There will be no sensitive data stored whatsoever.
+
+[Donations]
+Every donation you will make will be stored and rewarded with exclusive features.
+If you don't get rewarded enough in this tool, then you will get compensated in the next one.
+This will keep me motivated, and ensures that you guys always get the best stuff you deserve.
+Its true that some might find this stupid, like always ... 
+but they are not restricted in using this tool, infact, everyone will be able to use any of my tools, but it might be limited in some parts.
+Show your appreciation and ill show mine!
+
+If you already made a donation then you can contact me with your payment details and ill adjust your account.
+Be sure to contact me using the program.
+
+[USAGE]
+To be able to use anything from the tool , you would need to login first.
+Before you can login you will need to register and activate your account.
+After successful login, you will be able to use the tool as you where used to.
+
+The only thing that has changed as of the usage is the donation part to use the dlc items.
+
+[DISCLAIMER]
+All copyrighted content is the property of its respective owner. The author(s) &amp; software have no affiliations to anyone unless specifically stated.
+This software is non-profit and for personal use at the user's discretion for the purpose of modifying their savegame files associated with the game, unintended usage is strictly prohibited.</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>48</value>
+  </metadata>
+</root>

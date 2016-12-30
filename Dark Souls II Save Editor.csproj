@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FFD6FB42-51D1-4708-B940-231F0B773021}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dark_Souls_II_Save_Editor</RootNamespace>
+    <AssemblyName>Dark Souls II Save Editor</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <HockeyAppResourceId>4c5e9b1dd3234d81b6c5bc3dc557b4e2</HockeyAppResourceId>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HavenInterface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>references\HavenInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2016.1.112.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>references\Telerik.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2016.1.112.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>references\Telerik.WinControls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadDock, Version=2016.1.112.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>references\Telerik.WinControls.RadDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Dark, Version=2016.1.112.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>references\Telerik.WinControls.Themes.VisualStudio2012Dark.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2016.1.112.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>references\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2016.1.112.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>references\TelerikCommon.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BND4\BndEntry.cs" />
+    <Compile Include="Controls\AddDBItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AddDBItemControl.Designer.cs">
+      <DependentUpon>AddDBItemControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AddPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AddPage.Designer.cs">
+      <DependentUpon>AddPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AllObjects.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AllObjects.Designer.cs">
+      <DependentUpon>AllObjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AreasUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AreasUI.Designer.cs">
+      <DependentUpon>AreasUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DropDownContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DropDownContainer.Designer.cs">
+      <DependentUpon>DropDownContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HelpPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\HelpPage.Designer.cs">
+      <DependentUpon>HelpPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DragAndDropListview.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EquipmentUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\EquipmentUI.Designer.cs">
+      <DependentUpon>EquipmentUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FTPControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FTPControl.Designer.cs">
+      <DependentUpon>FTPControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FTPSaveFile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FTPSaveFile.Designer.cs">
+      <DependentUpon>FTPSaveFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InventoryViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\InventoryViewer.Designer.cs">
+      <DependentUpon>InventoryViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ItemChooser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ItemChooser.Designer.cs">
+      <DependentUpon>ItemChooser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ItemParamProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ItemParamProperties.Designer.cs">
+      <DependentUpon>ItemParamProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProgressPopupUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ProgressPopupUI.Designer.cs">
+      <DependentUpon>ProgressPopupUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PopupContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PopupContainer.Designer.cs">
+      <DependentUpon>PopupContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PopupMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PopupMessage.designer.cs">
+      <DependentUpon>PopupMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PreventBan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PreventBan.Designer.cs">
+      <DependentUpon>PreventBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SettingsUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SettingsUI.Designer.cs">
+      <DependentUpon>SettingsUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SpellParamViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SpellParamViewer.Designer.cs">
+      <DependentUpon>SpellParamViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SpellProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SpellProperties.Designer.cs">
+      <DependentUpon>SpellProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\STFSFixer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\STFSFixer.Designer.cs">
+      <DependentUpon>STFSFixer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ToolsMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ToolsMenu.Designer.cs">
+      <DependentUpon>ToolsMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\USBManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\USBManager.Designer.cs">
+      <DependentUpon>USBManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UsedSlot.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UsedSlot.Designer.cs">
+      <DependentUpon>UsedSlot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WeaponStatEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\WeaponStatEditor.Designer.cs">
+      <DependentUpon>WeaponStatEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB Builder\LanguageDB.cs" />
+    <Compile Include="Various.cs" />
+    <Compile Include="GlobalAppSettings.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DMG\DmgEntry.cs" />
+    <Compile Include="DMG\DMGFile.cs" />
+    <Compile Include="DMG\ItemEntry.cs" />
+    <Compile Include="Forms\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB Builder\DataBase.cs" />
+    <Compile Include="Forms\Set Quantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Set Quantity.Designer.cs">
+      <DependentUpon>Set Quantity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SetWeaponInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SetWeaponInfo.Designer.cs">
+      <DependentUpon>SetWeaponInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameters\ItemParameter.cs" />
+    <Compile Include="Parameters\ParameterEntry.cs" />
+    <Compile Include="BND4\MainBND4.cs" />
+    <Compile Include="Controls\FileMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FileMain.Designer.cs">
+      <DependentUpon>FileMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DataBaseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DataBaseControl.Designer.cs">
+      <DependentUpon>DataBaseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MainParam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MainParam.Designer.cs">
+      <DependentUpon>MainParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PlayerStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PlayerStatus.Designer.cs">
+      <DependentUpon>PlayerStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Progressview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Progressview.Designer.cs">
+      <DependentUpon>Progressview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SelectedUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SelectedUser.Designer.cs">
+      <DependentUpon>SelectedUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SlotSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SlotSelector.Designer.cs">
+      <DependentUpon>SlotSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameters\SoulsRequired.cs" />
+    <Compile Include="Parameters\WeaponEffect.cs" />
+    <Compile Include="Progressor.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Functions.cs" />
+    <Compile Include="Parameters\MainParamManager.cs" />
+    <Compile Include="Parameters\MainLevelEffect.cs" />
+    <Compile Include="Parameters\MainWeaponEffect.cs" />
+    <Compile Include="Parameters\MainSpellParam.cs" />
+    <Compile Include="Parameters\SpellParameter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PS3FileSystem\Delegates.cs" />
+    <Compile Include="PS3FileSystem\Functions.cs" />
+    <Compile Include="PS3FileSystem\Param_PFD.cs" />
+    <Compile Include="PS3FileSystem\PARAM_SFO.cs" />
+    <Compile Include="PS3FileSystem\Ps3File.cs" />
+    <Compile Include="PS3FileSystem\Ps3SaveManager.cs" />
+    <Compile Include="PS3FileSystem\SecureFileInfo.cs" />
+    <Compile Include="SaveStuff\Bonfire.cs" />
+    <Compile Include="SaveStuff\CharStats.cs" />
+    <Compile Include="SaveStuff\Equipment.cs" />
+    <Compile Include="SaveStuff\FTPSave.cs" />
+    <Compile Include="SaveStuff\FTPSaveInfo.cs" />
+    <Compile Include="SaveStuff\Inventory.cs" />
+    <Compile Include="SaveStuff\ItemEntry.cs" />
+    <Compile Include="SaveStuff\ItemTypeInstance.cs" />
+    <Compile Include="SaveStuff\LegitStats.cs" />
+    <Compile Include="SaveStuff\MainBlock.cs" />
+    <Compile Include="SaveStuff\MainFile.cs" />
+    <Compile Include="SaveStuff\MapData.cs" />
+    <Compile Include="SaveStuff\MapEntry.cs" />
+    <Compile Include="SaveStuff\PCEntry.cs" />
+    <Compile Include="SaveStuff\PCSave.cs" />
+    <Compile Include="SaveStuff\PCSlot.cs" />
+    <Compile Include="SaveStuff\SaveBlock.cs" />
+    <Compile Include="SaveStuff\SaveInfo.cs" />
+    <Compile Include="SaveStuff\SaveSlot.cs" />
+    <Compile Include="STFSPackage\AvatarAssetDefinitions.cs" />
+    <Compile Include="STFSPackage\Constants.cs" />
+    <Compile Include="STFSPackage\ContentHeader.cs" />
+    <Compile Include="STFSPackage\Delegates.cs" />
+    <Compile Include="STFSPackage\HashEntry.cs" />
+    <Compile Include="STFSPackage\HashTable.cs" />
+    <Compile Include="STFSPackage\ProgressChangedArg.cs" />
+    <Compile Include="STFSPackage\ProgressCompletedArg.cs" />
+    <Compile Include="STFSPackage\RsaParam.cs" />
+    <Compile Include="STFSPackage\STFSDefinitions.cs" />
+    <Compile Include="STFSPackage\StfsDirectory.cs" />
+    <Compile Include="STFSPackage\StfsEntry.cs" />
+    <Compile Include="STFSPackage\StfsFile.cs" />
+    <Compile Include="STFSPackage\StfsPackage.cs" />
+    <Compile Include="STFSPackage\VariosStuff.cs" />
+    <Compile Include="StringCipher.cs" />
+    <Compile Include="Themes.cs" />
+    <Compile Include="WindowWrapper.cs" />
+    <EmbeddedResource Include="Controls\AddDBItemControl.resx">
+      <DependentUpon>AddDBItemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AddPage.resx">
+      <DependentUpon>AddPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AllObjects.resx">
+      <DependentUpon>AllObjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AreasUI.resx">
+      <DependentUpon>AreasUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DropDownContainer.resx">
+      <DependentUpon>DropDownContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HelpPage.resx">
+      <DependentUpon>HelpPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EquipmentUI.resx">
+      <DependentUpon>EquipmentUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FileMain.resx">
+      <DependentUpon>FileMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FTPControl.resx">
+      <DependentUpon>FTPControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FTPSaveFile.resx">
+      <DependentUpon>FTPSaveFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\InventoryViewer.resx">
+      <DependentUpon>InventoryViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DataBaseControl.resx">
+      <DependentUpon>DataBaseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ItemChooser.resx">
+      <DependentUpon>ItemChooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ItemParamProperties.resx">
+      <DependentUpon>ItemParamProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ProgressPopupUI.resx">
+      <DependentUpon>ProgressPopupUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MainParam.resx">
+      <DependentUpon>MainParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PlayerStatus.resx">
+      <DependentUpon>PlayerStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PopupContainer.resx">
+      <DependentUpon>PopupContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PopupMessage.resx">
+      <DependentUpon>PopupMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PreventBan.resx">
+      <DependentUpon>PreventBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Progressview.resx">
+      <DependentUpon>Progressview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SelectedUser.resx">
+      <DependentUpon>SelectedUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SettingsUI.resx">
+      <DependentUpon>SettingsUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SlotSelector.resx">
+      <DependentUpon>SlotSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SpellParamViewer.resx">
+      <DependentUpon>SpellParamViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SpellProperties.resx">
+      <DependentUpon>SpellProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\STFSFixer.resx">
+      <DependentUpon>STFSFixer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ToolsMenu.resx">
+      <DependentUpon>ToolsMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\USBManager.resx">
+      <DependentUpon>USBManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UsedSlot.resx">
+      <DependentUpon>UsedSlot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\WeaponStatEditor.resx">
+      <DependentUpon>WeaponStatEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Set Quantity.resx">
+      <DependentUpon>Set Quantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SetWeaponInfo.resx">
+      <DependentUpon>SetWeaponInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\icons.DB" />
+    <None Include="Resources\KV.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1375641541_usb_connected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Program_Group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Devices-media-floppy-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-document-save-all-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-document-close-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log-Out-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1365628384_file hjh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Info-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Upload-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Files-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScreenShot1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Equipment Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Weapon Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Right Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box_empty_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item_Param_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spells_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+    <Content Include="references\HavenInterface.dll" />
+    <Content Include="references\Telerik.WinControls.dll" />
+    <Content Include="references\Telerik.WinControls.GridView.dll" />
+    <Content Include="references\Telerik.WinControls.RadDock.dll" />
+    <Content Include="references\Telerik.WinControls.Themes.VisualStudio2012Dark.dll" />
+    <Content Include="references\Telerik.WinControls.UI.dll" />
+    <Content Include="references\TelerikCommon.dll" />
+    <None Include="Resources\DataDownloader.exe" />
+    <None Include="Resources\Smiley-Blue-icon.png" />
+    <None Include="Resources\Actions-format-text-italic-icon.png" />
+    <None Include="Resources\Actions-format-text-underline-icon.png" />
+    <None Include="Resources\Actions-format-text-bold-icon.png" />
+    <None Include="Resources\select-font-icon.png" />
+    <None Include="Resources\font-color-icon.png" />
+    <None Include="Resources\Offline.png" />
+    <None Include="Resources\online.png" />
+    <None Include="Resources\DSIIImage.jpg" />
+    <None Include="Resources\1391881208_messagebox_warning.png" />
+    <None Include="Resources\questions.txt" />
+    <None Include="Resources\Button-Info-icon1.png" />
+    <None Include="Resources\oie_cHO0jw9zm9e1 %281%29.png" />
+    <None Include="Resources\oie_cHO0jw9zm9e1.png" />
+    <None Include="Resources\Information.png" />
+    <None Include="Resources\section_image.png" />
+    <None Include="Resources\Accept-icon.png" />
+    <None Include="Resources\yellow-ok-icon.png" />
+    <None Include="Resources\help-icon.png" />
+    <None Include="Resources\Recycle-Bin-Empty-icon.png" />
+    <None Include="Resources\lock-unlock-icon.png" />
+    <None Include="Resources\lock-icon.png" />
+    <None Include="Resources\star-icon.png" />
+    <None Include="Resources\VI_0009.tpf.png" />
+    <None Include="Resources\VI_0008.tpf.png" />
+    <None Include="Resources\VI_0007.tpf.png" />
+    <None Include="Resources\VI_0006.tpf.png" />
+    <None Include="Resources\VI_0005.tpf.png" />
+    <None Include="Resources\VI_0004.tpf.png" />
+    <None Include="Resources\VI_0003.tpf.png" />
+    <None Include="Resources\VI_0002.tpf.png" />
+    <None Include="Resources\VI_0001.tpf.png" />
+    <None Include="Resources\Spain.png" />
+    <None Include="Resources\Russia.png" />
+    <None Include="Resources\Portugal-Flag-icon.png" />
+    <None Include="Resources\Poland.png" />
+    <None Include="Resources\Korea.png" />
+    <None Include="Resources\Japan.png" />
+    <None Include="Resources\Italy.png" />
+    <None Include="Resources\Germany.png" />
+    <None Include="Resources\France.png" />
+    <None Include="Resources\English.png" />
+    <None Include="Resources\chinese.png" />
+    <None Include="Resources\recycle_bin_f.png" />
+    <None Include="Resources\recycle_bin_full.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\Recycle-icon.png" />
+    <None Include="Resources\move-icon.png" />
+    <None Include="Resources\unknown.png" />
+    <None Include="Resources\Icon.png" />
+    <None Include="Resources\Exclamation-icon.png" />
+    <None Include="Resources\1364784228_filesaveas.png" />
+    <None Include="Resources\CharacterBaseStats.txt" />
+    <None Include="Resources\Accept1.png" />
+    <None Include="Resources\darksouls2.png" />
+    <None Include="Resources\ghost.png" />
+    <None Include="Resources\Thumbnail.png" />
+    <None Include="Resources\1397693786_chevron-left.png" />
+    <None Include="Resources\1397693777_chevron-right.png" />
+    <None Include="Resources\1397693761_chevron-down.png" />
+    <None Include="Resources\1397693748_chevron-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

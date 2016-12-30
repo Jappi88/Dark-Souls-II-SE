@@ -1,0 +1,96 @@
+[Warrior]
+level = 12
+VGR = 7
+END = 6
+VIT = 6
+ATN = 5
+STR = 15
+Dex = 11
+ADP = 5
+INT = 5
+FTH = 5
+SoulM = 0
+[Knight]
+level = 13
+VGR = 12
+END = 6
+VIT = 7
+ATN = 4
+STR = 11
+Dex = 8
+ADP = 9
+INT = 3
+FTH = 6
+SoulM = 0
+[Swordsman]
+level = 12
+VGR = 4
+END = 8
+VIT = 4
+ATN = 6
+STR = 9
+Dex = 16
+ADP = 6
+INT = 7
+FTH = 5
+SoulM = 0
+[Bandit]
+level = 11
+VGR = 9
+END = 7
+VIT = 11
+ATN = 2
+STR = 9
+Dex = 14
+ADP = 3
+INT = 1
+FTH = 8
+SoulM = 0
+[Cleric]
+level = 14
+VGR = 10
+END = 3
+VIT = 8
+ATN = 10
+STR = 11
+Dex = 5
+ADP = 4
+INT = 4
+FTH = 12
+SoulM = 0
+[Sorcerer]
+level = 11
+VGR = 5
+END = 6
+VIT = 5
+ATN = 12
+STR = 3
+Dex = 7
+ADP = 8
+INT = 14
+FTH = 4
+SoulM = 0
+[Explorer]
+level = 10
+VGR = 7
+END = 6
+VIT = 9
+ATN = 7
+STR = 6
+Dex = 6
+ADP = 12
+INT = 5
+FTH = 5
+SoulM = 0
+[Deprived]
+level = 1
+VGR = 6
+END = 6
+VIT = 6
+ATN = 6
+STR = 6
+Dex = 6
+ADP = 6
+INT = 6
+FTH = 6
+SoulM = 0
