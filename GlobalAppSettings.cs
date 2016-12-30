@@ -42,7 +42,7 @@ namespace Dark_Souls_II_Save_Editor
     {
         public static GlobalAppSettings GlobalInfo = new GlobalAppSettings
         {
-            Version = "2.0.0.5",
+            Version = "3.0.0.0",
             Guid = "40679258-ab28-4508-80a4-816478857264",
             Company = "Jappi88",
             Title = "Dark Souls II Save Editor",
